@@ -1,13 +1,13 @@
 <script>
   import Card from "$lib/Card.svelte";
+  import {dataKarya} from "$lib/store.js";
+  // console.log($dataKarya);
 </script>
 
 <div class="cardList">
-  <Card />
-  <Card />
-  <Card />
-  <Card />
-  <Card />
+  {#each $dataKarya as karya}
+  <Card karya={karya} />
+  {/each}
 </div>
 
 <style>

@@ -3,6 +3,7 @@
 		"baseUrl": ".",
 		"paths": {
 			"$lib": ["src/lib"],
+			"$repo": ["src/repo"],
 			"$lib/*": ["src/lib/*"]
 		}
 	},

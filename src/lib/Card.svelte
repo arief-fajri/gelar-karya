@@ -1,20 +1,18 @@
 <script>
-  import { goto } from "$app/navigation";
+  export let karya;
 </script>
 
 <div class="card">
   <div class="cardItem">
     <img src="cover.jpg" alt="cover book" class="coverBook" />
     <div class="description">
-      <h2>BOOK TITLe</h2>
-      <p>Author: Jhony Joly</p>
+      <h2>{karya.judul}</h2>
+      <p class="author">Penulis: {karya.penulis}</p>
       <p class="synopsis">
-        "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Veniam
-        dolorem a soluta facere distinctio ducimus totam blanditiis."
+        "{karya.sinopsis}"
       </p>
       <div class="action">
-        <!--button> Share </button-->
-        <a href="/karya"> Lihat Karya </a>
+        <a href={`/${karya.id}`}> Lihat Karya </a>
       </div>
     </div>
   </div>
@@ -45,6 +43,9 @@
   .description h2 {
     text-transform: uppercase;
     margin-bottom: 5px;
+  }
+  .author {
+    text-transform: capitalize;
   }
   .synopsis {
     font-style: italic;

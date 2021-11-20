@@ -15,8 +15,12 @@
   
   <header>
     <h1 on:click={()=>goto("/")}>GelarKarya</h1>
-    <p>{$currentPage}</p>
-    <button on:click={toggleModal}>Unggah Karyamu</button>
+    {$currentPage}
+    <div>
+    <button on:click={()=>goto("/")}>Etalase</button>
+    <button on:click={()=>goto("/")}>F.A.Q</button>
+    <button on:click={toggleModal} class="default">Unggah Karyamu</button>
+  </div>
   </header>
   
   <Modal isOpenModal={isOpenModal} on:closeModal={toggleModal}>
@@ -44,6 +48,11 @@
       background-color: var(--color-main);
       color: var(--color-white);
       border-color: var(--color-white);
+      margin-left: 10px;
+    }
+    .default {
+      background-color: var(--color-white);
+      color: var(--color-main);
     }
   </style>
   
