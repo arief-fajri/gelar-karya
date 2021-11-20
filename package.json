@@ -13,5 +13,8 @@
     "@sveltejs/kit": "next",
     "svelte": "^3.42.6"
   },
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "pdfjs-dist": "^2.10.377"
+  }
 }

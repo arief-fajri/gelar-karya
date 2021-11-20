@@ -9,4 +9,6 @@ let cek = parseInt($page.params.slug)
     <h1>{karya[0].judul}</h1>
     <p>{karya[0].file}</p>
 
+    <canvas id="pdf"></canvas>
+
 </article>

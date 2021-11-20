@@ -12,7 +12,9 @@
         "{karya.sinopsis}"
       </p>
       <div class="action">
-        <a href={`/${karya.id}`}> Lihat Karya </a>
+        <!--a href={`/${karya.id}`}> Lihat Karya </a-->
+        <button>Donasi</button>
+        <button>Beli</button>
       </div>
     </div>
   </div>
@@ -56,7 +58,7 @@
     text-align: right;
     margin-top: 20px;
   }
-  a {
+  a,button {
     background-color: var(--color-primary-100);
     color: var(--color-black);
     padding: 5px 10px;
