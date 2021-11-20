@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>GelarKarya</title>
+
+		
+
+		<link rel="modulepreload" href="/_app/start-4db69403.js">
+		<link rel="modulepreload" href="/_app/chunks/vendor-1d2e619f.js">
+		<link rel="modulepreload" href="/_app/chunks/singletons-12a22614.js">
+		<link rel="modulepreload" href="/_app/pages/__layout.svelte-d6e9d718.js">
+		<link rel="modulepreload" href="/_app/chunks/navigation-51f4a605.js">
+		<link rel="modulepreload" href="/_app/pages/karya.svelte-e947a82e.js">
+		<link rel="stylesheet" href="/_app/assets/start-61d1577b.css">
+		<link rel="stylesheet" href="/_app/assets/pages/__layout.svelte-155b0d38.css">
+
+		<script type="module">
+			import { start } from "/_app/start-4db69403.js";
+			start({
+				target: document.querySelector("#svelte"),
+				paths: {"base":"","assets":""},
+				session: {},
+				host: location.host,
+				route: true,
+				spa: false,
+				trailing_slash: "never",
+				hydrate: {
+					status: 200,
+					error: null,
+					nodes: [
+						import("/_app/pages/__layout.svelte-d6e9d718.js"),
+						import("/_app/pages/karya.svelte-e947a82e.js")
+					],
+					page: {
+						host: location.host, // TODO this is redundant
+						path: "\u002Fkarya",
+						query: new URLSearchParams(""),
+						params: {}
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<div id="svelte">
+
+
+
+<header class="svelte-1sf9jpw"><h1 class="svelte-1sf9jpw">GelarKarya</h1>
+    <p>Home</p>
+    <button class="svelte-1sf9jpw">Unggah Karyamu</button></header>
+  
+  <div class="backdrop svelte-isi9gk" style="display: none;"><div class="modal svelte-isi9gk"><h1 class="svelte-1pm9pcp">Unggah Karya</h1>
+<form class="svelte-1pm9pcp"><div class="inputContainer svelte-1pm9pcp"><input type="text" id="nama" class="svelte-1pm9pcp">
+    <label for="nama" class="svelte-1pm9pcp">Nama Anda</label></div>
+  <div class="inputContainer svelte-1pm9pcp"><input type="email" id="email" class="svelte-1pm9pcp">
+    <label for="email" class="svelte-1pm9pcp">Email Anda</label></div>
+  <div class="inputContainer svelte-1pm9pcp"><input type="text" id="judul" class="svelte-1pm9pcp">
+    <label for="judul" class="svelte-1pm9pcp">Judul Karya</label></div>
+  <div class="inputContainer svelte-1pm9pcp"><textarea id="sinopsis" class="svelte-1pm9pcp"></textarea>
+    <label for="sinopsis" class="svelte-1pm9pcp">Sinopsis</label></div>
+  <div class="inputFile svelte-1pm9pcp"><input type="file" id="file" class="svelte-1pm9pcp"></div>
+  <div class="action svelte-1pm9pcp"><button type="submit" class="svelte-1pm9pcp">Publish Karyamu</button></div>
+</form></div>
+</div>
+
+<main><article><h1>TEST HALAMAN SINGLE PAGE</h1>
+</article></main>
+
+
+
+			
+		</div>
+	</body>
+</html>
