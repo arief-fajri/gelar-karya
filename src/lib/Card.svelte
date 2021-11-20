@@ -13,8 +13,8 @@
       </p>
       <div class="action">
         <!--a href={`/${karya.id}`}> Lihat Karya </a-->
-        <button>Donasi</button>
-        <button>Beli</button>
+        <button>Donasi (Min. Rp 10.000)</button>
+        <button>Beli (Rp 100.000)</button>
       </div>
     </div>
   </div>
