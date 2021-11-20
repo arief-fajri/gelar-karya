@@ -14,6 +14,10 @@ const config = {
       assets: "build",
       fallback: null,
     }),
+	paths: {
+      // YOUR github repository name
+      base: "/svelte-kit-github-page-example/",
+    },
   },
 };
 
