@@ -24,7 +24,7 @@
   {/if}
   <div>
     <button on:click={() => goto("/")}>Etalase</button>
-    <button on:click={() => goto("/faq")}>F.A.Q</button>
+    <button on:click={() => {goto("/faq"); val=""}}>F.A.Q</button>
     <button on:click={toggleModal} class="default">Unggah Karyamu</button>
   </div>
 </header>
