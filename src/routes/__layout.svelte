@@ -4,7 +4,7 @@
 </script>
 
 <svelte:head>
-  <title>GelarKarya</title>
+  <title>WebVel</title>
 </svelte:head>
 <Header />
 
