@@ -2,9 +2,9 @@
   import { createEventDispatcher } from "svelte";
   import { dataKarya } from "$lib/store.js";
   export let isOpenModal;
-
+  let verified;
   const dispatch = createEventDispatcher();
-
+ 
   function onSubmit(e) {
     const formData = new FormData(e.target);
 
@@ -14,23 +14,17 @@
       data[key] = value;
     }
     data.id = $dataKarya.length + 2;
-    
-    // let obj = {
-    //     id: id,
-    //     penulis: data.penulis,
-    //     email: data.email,
-    //     judul: data.judul,
-    //     sinopsis: data.sinopsis,
-    //     cover: "cover.jpg",
-    //     file: "$repo/My-Teacher-My-Husband.pdf"
-    // }
+
     console.log(data);
     $dataKarya = [...$dataKarya, data]
-    isOpenModal = false;
+    verified = true;
+  }
+  function modalClose() {
+    verified = false;
     dispatch("closeModal", { isOpenModal });
   }
 </script>
-
+{#if !verified}
 <h1>Unggah Karya</h1>
 <form on:submit|preventDefault={onSubmit}>
   <div class="inputContainer">
@@ -53,15 +47,25 @@
     <input type="file" id="file" readonly/>
   </div-->
   <div class="action">
+    <button type="button" on:click={modalClose}>Batalkan</button>
     <button type="submit">Publish Karyamu</button>
   </div>
 </form>
+{:else}
+<h2>Terimakasih,<br> Karya anda sedang diperiksa oleh tim editor.</h2>
+<h3>Kami akan segera memberitahu anda melalui email. </h3>
+<button on:click={modalClose}>OK!</button>
+{/if}
 
 <style>
   h1 {
     text-align: center;
     text-decoration: underline;
     margin-bottom: 0;
+  }
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
   }
   form {
     width: 100%;

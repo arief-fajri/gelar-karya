@@ -4,7 +4,6 @@
   const dispatch = createEventDispatcher();
 
   export let isOpenModal;
-
   function closeModal() {
     isOpenModal = false;
     dispatch("closeModal", { isOpenModal });
@@ -14,7 +13,6 @@
 <div
   class="backdrop"
   style="display: {isOpenModal ? 'block' : 'none'};"
-  on:click|self={closeModal}
 >
   <div class="modal">
     <slot />

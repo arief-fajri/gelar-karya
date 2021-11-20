@@ -3,6 +3,9 @@
   import { goto } from "$app/navigation";
   import FormAdd from "./FormAdd.svelte";
   import { searchItems } from "./store.js";
+  import { page } from "$app/stores"
+
+  $: isActive = $page.path === "/";
 
   let isOpenModal = false;
   const toggleModal = () => {
@@ -10,15 +13,18 @@
   };
   let val = "";
   $: searchItems.set(val);
+
 </script>
 
 <header>
   <!--h1 on:click={() => goto("/")}>GelarKarya</h1-->
   <img src="logo.png" alt="logo" />
+  {#if isActive}
   <input bind:value={val} type="text" placeholder="Cari Judul Karya . . ." />
+  {/if}
   <div>
     <button on:click={() => goto("/")}>Etalase</button>
-    <button on:click={() => goto("/")}>F.A.Q</button>
+    <button on:click={() => goto("/faq")}>F.A.Q</button>
     <button on:click={toggleModal} class="default">Unggah Karyamu</button>
   </div>
 </header>
