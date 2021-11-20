@@ -13,11 +13,7 @@ const config = {
       pages: "build",
       assets: "build",
       fallback: null,
-    }),
-	paths: {
-      // YOUR github repository name
-      base: "/gelar-karya",
-    },
+    })
   },
 };
 

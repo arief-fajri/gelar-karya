@@ -14,7 +14,7 @@
       </p>
       <div class="action">
         <!--button> Share </button-->
-        <button on:click={() => goto("/karya")}> Lihat Karya </button>
+        <a href="/karya"> Lihat Karya </a>
       </div>
     </div>
   </div>
@@ -55,7 +55,7 @@
     text-align: right;
     margin-top: 20px;
   }
-  button {
+  a {
     background-color: var(--color-primary-100);
     color: var(--color-black);
     padding: 5px 10px;
