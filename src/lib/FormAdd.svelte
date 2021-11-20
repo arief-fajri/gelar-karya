@@ -1,5 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
+  import { dataKarya } from "$lib/store.js";
   export let isOpenModal;
 
   const dispatch = createEventDispatcher();
@@ -12,7 +13,19 @@
       const [key, value] = field;
       data[key] = value;
     }
+    data.id = $dataKarya.length + 2;
+    
+    // let obj = {
+    //     id: id,
+    //     penulis: data.penulis,
+    //     email: data.email,
+    //     judul: data.judul,
+    //     sinopsis: data.sinopsis,
+    //     cover: "cover.jpg",
+    //     file: "$repo/My-Teacher-My-Husband.pdf"
+    // }
     console.log(data);
+    $dataKarya = [...$dataKarya, data]
     isOpenModal = false;
     dispatch("closeModal", { isOpenModal });
   }
@@ -21,24 +34,24 @@
 <h1>Unggah Karya</h1>
 <form on:submit|preventDefault={onSubmit}>
   <div class="inputContainer">
-    <input type="text" id="nama" />
+    <input type="text" id="nama" name="penulis"/>
     <label for="nama">Nama Anda</label>
   </div>
   <div class="inputContainer">
-    <input type="email" id="email" />
+    <input type="email" id="email" name="email"/>
     <label for="email">Email Anda</label>
   </div>
   <div class="inputContainer">
-    <input type="text" id="judul" />
+    <input type="text" id="judul" name="judul"/>
     <label for="judul">Judul Karya</label>
   </div>
   <div class="inputContainer">
-    <textarea id="sinopsis" />
+    <textarea id="sinopsis" name="sinopsis"/>
     <label for="sinopsis">Sinopsis</label>
   </div>
-  <div class="inputFile">
-    <input type="file" id="file" />
-  </div>
+  <!--div class="inputFile">
+    <input type="file" id="file" readonly/>
+  </div-->
   <div class="action">
     <button type="submit">Publish Karyamu</button>
   </div>

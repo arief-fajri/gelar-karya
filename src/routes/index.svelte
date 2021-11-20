@@ -1,12 +1,12 @@
 <script>
   import Card from "$lib/Card.svelte";
-  import {dataKarya} from "$lib/store.js";
+  import { dataKarya } from "$lib/store.js";
   // console.log($dataKarya);
 </script>
 
 <div class="cardList">
   {#each $dataKarya as karya}
-  <Card karya={karya} />
+    <Card {karya} />
   {/each}
 </div>
 
@@ -17,4 +17,3 @@
     gap: 2rem;
   }
 </style>
-
