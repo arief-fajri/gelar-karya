@@ -1,6 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
   import { dataKarya } from "$lib/store.js";
+  import { goto } from "$app/navigation";
   export let isOpenModal;
   let verified;
   const dispatch = createEventDispatcher();
@@ -22,6 +23,7 @@
   function modalClose() {
     verified = false;
     dispatch("closeModal", { isOpenModal });
+    goto("/")
   }
 </script>
 {#if !verified}
