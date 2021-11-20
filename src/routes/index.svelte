@@ -1,2 +1,20 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+  import Card from "$lib/Card.svelte";
+</script>
+
+<div class="cardList">
+  <Card />
+  <Card />
+  <Card />
+  <Card />
+  <Card />
+</div>
+
+<style>
+  .cardList {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(420px, 1fr));
+    gap: 2rem;
+  }
+</style>
+
