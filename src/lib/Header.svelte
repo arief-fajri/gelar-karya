@@ -1,22 +1,21 @@
 <script>
   import Modal from "./Modal.svelte";
-  import { currentPage } from "./store.js";
   import { goto } from "$app/navigation";
   import FormAdd from "./FormAdd.svelte";
+  import { searchItems } from "./store.js";
 
   let isOpenModal = false;
   const toggleModal = () => {
     isOpenModal = !isOpenModal;
   };
-  function letsWrite() {
-    goto("/write");
-  }
+  let val = "";
+  $: searchItems.set(val);
 </script>
 
 <header>
   <!--h1 on:click={() => goto("/")}>GelarKarya</h1-->
-  <img src="logo.png" alt="logo">
-  <input type="text" placeholder="Cari Karya . . ." />
+  <img src="logo.png" alt="logo" />
+  <input bind:value={val} type="text" placeholder="Cari Judul Karya . . ." />
   <div>
     <button on:click={() => goto("/")}>Etalase</button>
     <button on:click={() => goto("/")}>F.A.Q</button>

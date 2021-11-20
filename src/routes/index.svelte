@@ -1,11 +1,10 @@
 <script>
   import Card from "$lib/Card.svelte";
-  import { dataKarya } from "$lib/store.js";
-  // console.log($dataKarya);
+  import { filtered } from "$lib/store.js";
 </script>
 
 <div class="cardList">
-  {#each $dataKarya as karya}
+  {#each $filtered as karya}
     <Card {karya} />
   {/each}
 </div>

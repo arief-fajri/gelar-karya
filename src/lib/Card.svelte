@@ -58,7 +58,7 @@
     text-align: right;
     margin-top: 20px;
   }
-  a,button {
+  button {
     background-color: var(--color-primary-100);
     color: var(--color-black);
     padding: 5px 10px;

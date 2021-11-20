@@ -1,7 +1,7 @@
 import { writable, derived } from "svelte/store";
 
-export let currentPage = writable('Home');
-export let dataKarya = writable([
+export const searchItems = writable('');
+export const dataKarya = writable([
     {
         id: 1,
         penulis: "sofia",
@@ -30,3 +30,8 @@ export let dataKarya = writable([
         file: "$repo/Puzzle.pdf"
     }
 ]);
+
+export const filtered = derived(
+	[searchItems, dataKarya], 
+	([$searchItems, $dataKarya]) => $dataKarya.filter(x => x.judul.toLocaleLowerCase().includes($searchItems.toLocaleLowerCase()))
+);
