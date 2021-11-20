@@ -15,8 +15,9 @@ const config = {
       fallback: null,
     }),
     paths: {
-      base: '/gelar-karya',
-    }
+      // YOUR github repository name
+      base: "/gelar-karya",
+    },
   },
 };
 
