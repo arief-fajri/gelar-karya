@@ -14,8 +14,8 @@
       const [key, value] = field;
       data[key] = value;
     }
+    
     data.id = $dataKarya.length + 2;
-
     console.log(data);
     $dataKarya = [...$dataKarya, data]
     verified = true;
@@ -30,15 +30,15 @@
 <h1>Unggah Karya</h1>
 <form on:submit|preventDefault={onSubmit}>
   <div class="inputContainer">
-    <input type="text" id="nama" name="penulis"/>
+    <input type="text" id="nama" name="penulis" required/>
     <label for="nama">Nama Anda</label>
   </div>
   <div class="inputContainer">
-    <input type="email" id="email" name="email"/>
+    <input type="email" id="email" name="email" required/>
     <label for="email">Email Anda</label>
   </div>
   <div class="inputContainer">
-    <input type="text" id="judul" name="judul"/>
+    <input type="text" id="judul" name="judul" required/>
     <label for="judul">Judul Karya</label>
   </div>
   <div class="inputContainer">
@@ -56,7 +56,7 @@
 {:else}
 <h2>Terimakasih,<br> Karya anda sedang diperiksa oleh tim editor.</h2>
 <h3>Kami akan segera memberitahu anda melalui email. </h3>
-<button on:click={modalClose}>OK!</button>
+<button type="button" on:click={modalClose}>OK!</button>
 {/if}
 
 <style>

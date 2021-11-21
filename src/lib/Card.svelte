@@ -1,5 +1,13 @@
 <script>
+  import FormConfirm from "./FormConfirm.svelte";
+  import Modal from "./Modal.svelte";
+
   export let karya;
+  let isOpenModal = false;
+  let itemId = karya.id
+  const toggleModal = () => {
+    isOpenModal = !isOpenModal;
+  };
 </script>
 
 <div class="card">
@@ -13,12 +21,16 @@
       </p>
       <div class="action">
         <!--a href={`/${karya.id}`}> Lihat Karya </a-->
-        <button>Donasi (Min. Rp 10.000)</button>
-        <button>Beli (Rp 100.000)</button>
+        <button on:click={toggleModal}>Donasi (Min. Rp 10.000)</button>
+        <button on:click={toggleModal}>Beli (Rp 100.000)</button>
       </div>
     </div>
   </div>
 </div>
+
+<Modal {isOpenModal} on:closeModal={toggleModal}>
+  <FormConfirm {isOpenModal} {itemId} on:closeModal={toggleModal} />
+</Modal>
 
 <style>
   .card {
