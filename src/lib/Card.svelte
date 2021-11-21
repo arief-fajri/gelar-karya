@@ -21,8 +21,8 @@
       </p>
       <div class="action">
         <!--a href={`/${karya.id}`}> Lihat Karya </a-->
-        <button on:click={toggleModal}>Donasi (Min. Rp 10.000)</button>
-        <button on:click={toggleModal}>Beli (Rp 100.000)</button>
+        <button on:click={toggleModal}>Donasi<br>(Min. Rp 10.000)</button>
+        <button on:click={toggleModal}>Beli<br>(Rp 100.000)</button>
       </div>
     </div>
   </div>
@@ -68,7 +68,7 @@
   }
   .action {
     text-align: right;
-    margin-top: 20px;
+    margin-top: 10px;
   }
   button {
     background-color: var(--color-primary-100);
@@ -77,5 +77,6 @@
     margin: 0 5px;
     font-size: 16px;
     border: 2px solid var(--color-text);
+    margin-top: 10px;
   }
 </style>

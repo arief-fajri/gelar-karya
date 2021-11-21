@@ -1,38 +1,24 @@
-# create-svelte
+# WebVel Indonesia
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte);
+Sebuah proyek sederhana yang bertujuan untuk menyederhanakan proses publikasi sebuah karya literasi dalam rangka meningkatkan kesejahteraan kreator literasi Indonesia.
 
-## Creating a project
+### LIve Demo : https://webvel.vercel.app/
 
-If you're seeing this, you've probably already done this step. Congrats!
+## Dependency
 
-```bash
-# create a new project in the current directory
-npm init svelte@next
-
-# create a new project in my-app
-npm init svelte@next my-app
-```
-
-> Note: the `@next` is temporary
+- node.js
+- sveltekit [https://kit.svelte.dev/]
+- adapter-vercel
 
 ## Developing
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
 ```bash
-npm run dev
+# clone repository
+git clone https://github.com/arief-fajri/gelar-karya.git
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
+# install dependency
+npm install
+
+# jalankan
+npm run dev 
 ```
-
-## Building
-
-Before creating a production version of your app, install an [adapter](https://kit.svelte.dev/docs#adapters) for your target environment. Then:
-
-```bash
-npm run build
-```
-
-> You can preview the built app with `npm run preview`, regardless of whether you installed an adapter. This should _not_ be used to serve your app in production.
